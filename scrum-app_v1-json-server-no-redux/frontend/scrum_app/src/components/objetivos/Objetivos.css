@@ -1,0 +1,133 @@
+.etapas {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+table {
+    background-color: olive;
+    /* width: 900px; */
+
+}
+
+table td {
+    background-color: aliceblue;
+    padding: 8px;
+    font-size: 1.1rem;
+}
+
+table {
+    width: 900px;
+    text-align: center;
+
+}
+
+table thead {
+    background-color: rgb(80, 72, 63);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 100;
+    border: 10px olive solid;
+}
+
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh 0px 0px 0px;
+}
+
+.back-button {
+    display: flex;
+    justify-content: flex-end;
+}
+.back-button > a > button {
+    background-color: white;
+    border-radius: 8px;
+}
+
+
+.row {
+    width: 800px
+}
+
+label {
+    font-size: 2rem;
+}
+.form-control {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+button {
+
+    background-color: white;
+    border-radius: 8px;
+    font-size: 1.1rem;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+}
+.row-button {
+    width: 800px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4vh;
+}
+
+div .main {
+    height: 100%;
+    /* display: flex; */
+    align-items: center;
+}
+
+div .container {
+    height: 100%;
+    /* margin: 3% 6%; */
+    align-items: center;
+}
+
+.label-etapas {
+    font-size: 1rem;
+}
+
+.form-group-etapas {
+    margin-top: 10px;
+    background-color: palegreen;
+    display: block;
+    flex-direction: column;
+}
+
+.form-group-etapas > label {
+    padding:    5px;
+
+}
+
+.etapa-row {
+    display: flex;
+    /* height: 40px; */
+}
+
+.etapa-delete-button {
+    margin: 0;
+    background-color: white;
+    border-radius: 0px;
+    font-size: 1rem;
+}
+
+.btn-etapas-load {
+    background-color: white;
+    font-size: 0.6rem;
+    margin: 0px 5px;
+}
+
+.btn-etapas-remove {
+    background-color: white;
+    font-size: 0.6rem;
+    margin-left: -3px
+}
+
