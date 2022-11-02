@@ -1,9 +1,9 @@
 import React from 'react'
 
-function EtapasForm({ etapas, id, updateEtapa, removeEtapa }) {
+function EtapasForm({ etapas, id, updateEtapa, removeEtapa, load, obj }) {
     if (id === -1) {
         return (
-            etapas.map(etapa => {
+            etapas.map((etapa, i) => {
                 id++
                 if (etapas[id]) {
                     return (
@@ -17,6 +17,8 @@ function EtapasForm({ etapas, id, updateEtapa, removeEtapa }) {
                                     placeholder="Digite uma nova etapa..." />
                                 <button className='etapa-delete-button' name={id}
                                     onClick={removeEtapa}>X</button>
+                                    <button className='etapa-delete-button' name={id}
+                                onClick={() => load(obj, i)}><i className="fa fa-pencil"></i></button>
 
                             </div>
                         </div>
@@ -41,11 +43,12 @@ function EtapasForm({ etapas, id, updateEtapa, removeEtapa }) {
                                 placeholder="Digite uma nova etapa..." />
                             <button className='etapa-delete-button' name={id}
                                 onClick={removeEtapa}>X</button>
+                                
                         </div>
                     </div>
                     <div className="form-element">
                         <label className="label-etapas">Descrição: </label>
-                        <div className="etapa-row">
+                        <div className="etapa-row"> 
                             <textarea type="text" className="form-control"
                                 cols="40" rows="5"
                                 name={id}

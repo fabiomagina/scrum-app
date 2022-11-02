@@ -16,7 +16,7 @@ function MainForm(props) {
                 <div className="row">
                     <div className="back-button">
                         <Link to="/objetivos">
-                            <button onClick={() => clear(props, setNovaEtapa)}>Voltar</button></Link>
+                            <button onClick={() => clear(props, setNovaEtapa)}>Limpar</button></Link>
                     </div>
                     <div className="form-group">
                         <label>Objetivo: </label>
@@ -29,7 +29,7 @@ function MainForm(props) {
                 </div>
             </div>
             <div className="form-group-etapas">
-                <EtapasForm etapas={props.obj.etapas} updateEtapa={props.updateEtapa} removeEtapa={props.removeEtapa} id={props.id} />
+                <EtapasForm obj={props.obj} etapas={props.obj.etapas} updateEtapa={props.updateEtapa} removeEtapa={props.removeEtapa} id={props.id} load={props.load} />
                 {NovaEtapaForm(props, novaEtapa)}
             </div>
             <div className="buttons">
@@ -55,7 +55,7 @@ function MainForm(props) {
 
 function handleNovaEtapa(props, setNovaEtapa) {
     if (props.etapa.id !== -1) {
-        props.clear()
+        props.load(props.obj)
         setNovaEtapa(true)
     }
     else {

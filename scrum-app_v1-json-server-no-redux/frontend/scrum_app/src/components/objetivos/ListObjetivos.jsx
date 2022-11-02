@@ -10,7 +10,7 @@ const renderRows = (props) => {
                 <td>{obj.title}</td>
                 <td>{
                     obj_.etapas.map((etapa, i) => {
-                        let etapas = <li key={i} className="etapas">{i}- {etapa.title} 
+                        let etapas = <li key={i} className="etapas">{i+1}- {etapa.title} 
                     <button className="btn-etapas-load" title="editar" name={etapa.id} obj={obj}
                         onClick={e => {
                             props.load(obj, i);

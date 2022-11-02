@@ -37,16 +37,25 @@ class Objetivos extends Component {
         })
     }
 
-    save() {
+    save(objetivo2) {
         const objetivo = this.state.obj
-        const metodo = objetivo.title ? 'put' : 'post'
+        const metodo = objetivo.id ? 'put' : 'post'
         const url = objetivo.id ? `${baseUrl}/${objetivo.id}` : `${baseUrl}`
         const obj = this.verificaNovaEtapa(objetivo)
         axios[metodo](url, obj)
             .then(resp => {
                 const lista = this.getUpdatedList(resp.data)
-                this.setState({ obj: initialState.obj, etapa: initialState.etapa, lista })
+                return lista
             })
+            .then(lista => {
+                const obj = objetivo2 ? objetivo2 : initialState.obj
+                this.setState({ obj, lista}) 
+                this.load(this.state.obj)
+                
+            })
+          
+            
+            
     }
 
     verificaNovaEtapa(objetivo) {
@@ -54,6 +63,7 @@ class Objetivos extends Component {
         if (etapa) {
             etapa.id = this.getNewEtapaId()
             objetivo.etapas.push(etapa)
+            this.setState({etapa: initialState.etapa})
         }
         return objetivo
 
@@ -82,7 +92,6 @@ class Objetivos extends Component {
 
     clear() {
         this.setState({ obj: initialState.obj, etapa: initialState.etapa })
-        // renderEtapa()
     }
 
     updateField(evento) {
@@ -96,6 +105,7 @@ class Objetivos extends Component {
     load(obj, etapa_id) {
         const obj_ = this.getEtapasVisiveis(obj)
         const etapa = this.state.etapa
+        console.log(etapa)
         if (etapa_id === undefined) etapa.id = -1
         else etapa.id = etapa_id
         this.setState({ obj: obj_, etapa })
@@ -114,6 +124,8 @@ class Objetivos extends Component {
         console.log(e)
         obj.etapas.splice(e.target.name, 1)
         this.setState({ obj })
+        this.save()
+        this.load(obj)
     }
 
     removeEtapaById(obj, id) {
@@ -145,7 +157,7 @@ class Objetivos extends Component {
         return (
             <Main icon="fa fa-graduation-cap" title="Objetivos">
                 <MainForm obj={this.state.obj} etapa={this.state.etapa} clear={this.clear} updateEtapa={this.updateEtapa} removeEtapa={this.removeEtapa}
-                    save={this.save} updateNewEtapa={this.updateNewEtapa} updateField={this.updateField} id={this.state.etapa.id} />
+                    save={this.save} updateNewEtapa={this.updateNewEtapa} updateField={this.updateField} id={this.state.etapa.id} load={this.load} />
                 <ListObjetivos list={this.state.lista} getEtapasVisiveis={this.getEtapasVisiveis} load={this.load}
                     removeEtapaById={this.removeEtapaById} remove={this.remove} />
 
