@@ -16,7 +16,7 @@ function MainForm(props) {
                 <div className="row">
                     <div className="back-button">
                         <Link to="/objetivos">
-                            <button onClick={() => clear(props, setNovaEtapa)}>Limpar</button></Link>
+                            <button onClick={() => clear(props, setNovaEtapa)}>Início</button></Link>
                     </div>
                     <div className="form-group">
                         <label>Objetivo: </label>
@@ -35,7 +35,6 @@ function MainForm(props) {
             <div className="buttons">
                 <div className="row-button">
                     <div className="button-row">
-                        <button className="btn_cancel" onClick={e => props.clear()}>Cancelar</button>
                         <button className="btn_save"
                             onClick={e => {
                                 props.save(e)
@@ -43,8 +42,8 @@ function MainForm(props) {
                             }}>Salvar</button>
                         <button onClick={() => 
                                 handleNovaEtapa(props, setNovaEtapa)
-                        } hidden={novaEtapa}> Nova Etapa</button>
-
+                            } hidden={novaEtapa}> Nova Etapa</button>
+                                
 
                     </div>
                 </div>

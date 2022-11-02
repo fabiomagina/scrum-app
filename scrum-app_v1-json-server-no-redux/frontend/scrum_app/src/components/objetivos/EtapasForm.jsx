@@ -15,10 +15,10 @@ function EtapasForm({ etapas, id, updateEtapa, removeEtapa, load, obj }) {
                                     value={etapas[id].title}
                                     onChange={updateEtapa}
                                     placeholder="Digite uma nova etapa..." />
-                                <button className='etapa-delete-button' name={id}
-                                    onClick={removeEtapa}>X</button>
                                     <button className='etapa-delete-button' name={id}
                                 onClick={() => load(obj, i)}><i className="fa fa-pencil"></i></button>
+                                <button className='etapa-delete-button' name={id}
+                                    onClick={removeEtapa}>X</button>
 
                             </div>
                         </div>
