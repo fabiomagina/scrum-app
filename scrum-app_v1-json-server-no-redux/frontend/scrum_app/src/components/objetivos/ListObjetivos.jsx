@@ -9,16 +9,16 @@ const renderRows = (props) => {
                 <td>{obj.id}</td>
                 <td>{obj.title}</td>
                 <td>{
-                    obj_.etapas.map(etapa => {
-                        let etapas = <li key={etapa.title} className="etapas">{etapa.id}- {etapa.title} 
+                    obj_.etapas.map((etapa, i) => {
+                        let etapas = <li key={i} className="etapas">{i}- {etapa.title} 
                     <button className="btn-etapas-load" title="editar" name={etapa.id} obj={obj}
                         onClick={e => {
-                            props.load(obj);
+                            props.load(obj, i);
                         }}>
                         <i className="fa fa-pencil"></i>
                     </button>
                     <button className="btn-etapas-remove"
-                        onClick={() => props.removeEtapaById(obj, etapa.id)}>
+                        onClick={() => props.removeEtapaById(obj, i)}>
                         <i className="fa fa-trash"></i>
                     </button></li>
                         return etapas

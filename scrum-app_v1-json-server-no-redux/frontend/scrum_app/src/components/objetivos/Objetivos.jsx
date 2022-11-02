@@ -8,14 +8,14 @@ import MainForm from "./MainForm"
 const initialState = {
     obj: { title: '', etapas: [] },
     lista: [],
-    etapa: { id: '', title: '', descricao: '', show: 1}
+    etapa: { id: -1, title: '', descricao: '', show: 1 }
 }
 
 const baseUrl = 'http://localhost:3001/objetivos'
 
 class Objetivos extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = { ...initialState }
         this.updateEtapa = this.updateEtapa.bind(this)
@@ -27,10 +27,10 @@ class Objetivos extends Component {
         this.updateField = this.updateField.bind(this)
         this.updateNewEtapa = this.updateNewEtapa.bind(this)
         this.save = this.save.bind(this)
-
+        this.clear = this.clear.bind(this)
     }
 
-    
+
     componentDidMount() {
         axios(baseUrl).then(resp => {
             this.setState({ lista: resp.data })
@@ -39,7 +39,7 @@ class Objetivos extends Component {
 
     save() {
         const objetivo = this.state.obj
-        const metodo = objetivo.id ? 'put' : 'post'
+        const metodo = objetivo.title ? 'put' : 'post'
         const url = objetivo.id ? `${baseUrl}/${objetivo.id}` : `${baseUrl}`
         const obj = this.verificaNovaEtapa(objetivo)
         axios[metodo](url, obj)
@@ -52,10 +52,11 @@ class Objetivos extends Component {
     verificaNovaEtapa(objetivo) {
         const etapa = this.state.etapa.title ? this.state.etapa : 0
         if (etapa) {
+            etapa.id = this.getNewEtapaId()
             objetivo.etapas.push(etapa)
-        } 
+        }
         return objetivo
-    
+
     }
 
     getUpdatedList(obj_at, add = true) {
@@ -70,9 +71,12 @@ class Objetivos extends Component {
         return obj
     }
 
-    getEtapaNewId() {
-        const obj = this.state.obj
-        const newId = obj.etapas.pop().id + 1
+    getNewEtapaId() {
+        let obj = this.state.obj
+        let newId = 0
+        if (obj.etapas[0]) {
+            newId = obj.etapas.length + 1
+        }
         return newId
     }
 
@@ -83,15 +87,18 @@ class Objetivos extends Component {
 
     updateField(evento) {
         const obj = { ...this.state.obj }
+        console.log(evento.target.value)
         obj[evento.target.name] = evento.target.value
         this.setState({ obj })
     }
 
 
-    load(obj) {
+    load(obj, etapa_id) {
         const obj_ = this.getEtapasVisiveis(obj)
-        this.setState({ obj : obj_ })
-        console.log(obj)
+        const etapa = this.state.etapa
+        if (etapa_id === undefined) etapa.id = -1
+        else etapa.id = etapa_id
+        this.setState({ obj: obj_, etapa })
     }
 
 
@@ -113,10 +120,10 @@ class Objetivos extends Component {
         obj.etapas.splice(id, 1)
         const url = `${baseUrl}/${obj.id}`
         axios.put(url, obj)
-        .then(resp => {
-            const lista = this.getUpdatedList(resp.data)
-            this.setState({ lista })
-        })
+            .then(resp => {
+                const lista = this.getUpdatedList(resp.data)
+                this.setState({ lista })
+            })
     }
 
     updateNewEtapa(evento) {
@@ -125,20 +132,22 @@ class Objetivos extends Component {
         this.setState({ etapa })
     }
 
-    updateEtapa(evento) {
+    updateEtapa(evento, type) {
         const obj = { ...this.state.obj }
-        obj.etapas[evento.target.name].title = evento.target.value
+        obj.etapas[evento.target.name][type] = evento.target.value
         this.setState({ obj })
     }
 
+    etapaLoadWatcher() {
 
+    }
     render() {
         return (
             <Main icon="fa fa-graduation-cap" title="Objetivos">
                 <MainForm obj={this.state.obj} etapa={this.state.etapa} clear={this.clear} updateEtapa={this.updateEtapa} removeEtapa={this.removeEtapa}
-                            save={this.save} updateNewEtapa={this.updateNewEtapa}/>
-                <ListObjetivos list={this.state.lista} getEtapasVisiveis={this.getEtapasVisiveis} load={this.load} 
-                            removeEtapaById={this.removeEtapaById} remove={this.remove}/>
+                    save={this.save} updateNewEtapa={this.updateNewEtapa} updateField={this.updateField} id={this.state.etapa.id} />
+                <ListObjetivos list={this.state.lista} getEtapasVisiveis={this.getEtapasVisiveis} load={this.load}
+                    removeEtapaById={this.removeEtapaById} remove={this.remove} />
 
             </Main>
         )
