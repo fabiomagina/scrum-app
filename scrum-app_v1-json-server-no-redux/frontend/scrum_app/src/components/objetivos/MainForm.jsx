@@ -16,7 +16,7 @@ function MainForm(props) {
                 <div className="row">
                     <div className="back-button">
                         <Link to="/objetivos">
-                            <button onClick={e => props.clear()}>Voltar</button></Link>
+                            <button onClick={() => clear(props, setNovaEtapa)}>Voltar</button></Link>
                     </div>
                     <div className="form-group">
                         <label>Objetivo: </label>
@@ -62,6 +62,11 @@ function handleNovaEtapa(props, setNovaEtapa) {
         setNovaEtapa(true)
     }
 
+}
+
+function clear(props, setNovaEtapa) {
+    props.clear()
+    setNovaEtapa(false)
 }
 
 function NovaEtapaForm(props, novaEtapa) {

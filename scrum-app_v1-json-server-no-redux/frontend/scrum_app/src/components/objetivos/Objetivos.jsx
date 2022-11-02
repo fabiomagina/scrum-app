@@ -73,7 +73,7 @@ class Objetivos extends Component {
 
     getNewEtapaId() {
         let obj = this.state.obj
-        let newId = 0
+        let newId = -1
         if (obj.etapas[0]) {
             newId = obj.etapas.length + 1
         }
