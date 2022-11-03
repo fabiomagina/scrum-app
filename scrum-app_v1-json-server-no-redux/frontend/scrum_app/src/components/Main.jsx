@@ -4,12 +4,10 @@ import React from 'react';
 
 function Main(props) {
   return (
-    <div>
-      <Header icon={props.icon} title={props.title}/>
-      <div className="box">
-
-      <div className="main">{props.children}</div>
-
+    <div className="main-container" >
+      <Header icon={props.icon} title={props.title} />
+      <div className='box'>
+        <div className="main">{props.children}</div>
       </div>
     </div>
   );

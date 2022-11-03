@@ -11,8 +11,8 @@
   background-color: rgb(11, 82, 11);
   height: 100%;
   display: grid;
-  grid-template-columns: 260px 1fr;
-  grid-template-rows: 1fr 40px;
+  grid-template-columns: 290px 1fr;
+  grid-template-rows: 1fr 4vh;
   grid-template-areas: 
       "menu main"
       "menu footer";

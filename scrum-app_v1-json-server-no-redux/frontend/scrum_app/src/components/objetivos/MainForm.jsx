@@ -1,5 +1,4 @@
 import EtapasForm from "./EtapasForm"
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -7,16 +6,16 @@ import { useEffect } from "react";
 function MainForm(props) {
     const [novaEtapa, setNovaEtapa] = useState(false)
     useEffect(() => {
-        if (props.etapa.id !== -1) setNovaEtapa(false)
-    }, [props.etapa.id])
+        console.log(novaEtapa)
+        if (props.etapa.id !== -1 && props.etapa.id !== 0) setNovaEtapa(false)
+    }, [props.etapa.id, novaEtapa])
 
     return (
         <>
-            <div className="form" id="objetivos">
+            <div className="form" id={props.obj.title}>
                 <div className="row">
                     <div className="back-button">
-                        <Link to="/objetivos">
-                            <button onClick={() => clear(props, setNovaEtapa)}>Início</button></Link>
+                            <button onClick={() => clear(props, setNovaEtapa)}>Início</button>
                     </div>
                     <div className="form-group">
                         <label>Objetivo: </label>
@@ -34,15 +33,16 @@ function MainForm(props) {
             </div>
             <div className="buttons">
                 <div className="row-button">
-                    <div className="button-row">
-                        <button className="btn_save"
-                            onClick={e => {
-                                props.save(e)
-                                setNovaEtapa(false)
-                            }}>Salvar</button>
                         <button onClick={() => 
                                 handleNovaEtapa(props, setNovaEtapa)
                             } hidden={novaEtapa}> Nova Etapa</button>
+                    <div className="button-row">
+                        <button className="btn_save"
+                            onClick={e => {
+                                props.save()
+                                setNovaEtapa(false)
+                            }}>Salvar</button>
+                        
                                 
 
                     </div>
@@ -70,13 +70,10 @@ function clear(props, setNovaEtapa) {
 
 function NovaEtapaForm(props, novaEtapa) {
     if (novaEtapa) {
-
         return (
             <div>
-
                 <div className="form-etapa-group" >
                     <div className="form-element">
-
                     <label className="label-etapas">nova etapa: </label>
                     <div className="etapa-row">
                         <input type="text" className="form-control"
@@ -84,7 +81,6 @@ function NovaEtapaForm(props, novaEtapa) {
                             value={props.etapa.title}
                             onChange={e => props.updateNewEtapa(e)}
                             placeholder="Digite uma nova etapa..." />
-
                     </div>
                     </div>
                 </div>

@@ -41,18 +41,19 @@ class Objetivos extends Component {
         const objetivo = this.state.obj
         const metodo = objetivo.id ? 'put' : 'post'
         const url = objetivo.id ? `${baseUrl}/${objetivo.id}` : `${baseUrl}`
-        const obj = this.verificaNovaEtapa(objetivo)
+        let obj = this.verificaNovaEtapa(objetivo)
         axios[metodo](url, obj)
             .then(resp => {
                 const lista = this.getUpdatedList(resp.data)
+                if (!this.state.obj.id) this.clear()
+                if (this.state.obj.id) this.load(this.state.obj)
+                
                 return lista
             })
             .then(lista => {
-                const obj = objetivo2 ? objetivo2 : initialState.obj
-                this.setState({ obj, lista}) 
-                this.load(this.state.obj)
-                
+                this.setState({ lista })
             })
+            
           
             
             
@@ -91,7 +92,8 @@ class Objetivos extends Component {
     }
 
     clear() {
-        this.setState({ obj: initialState.obj, etapa: initialState.etapa })
+        const obj = { title: '', etapas: [] }
+        this.setState({ obj })
     }
 
     updateField(evento) {
