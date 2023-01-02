@@ -7,7 +7,7 @@ function MainForm(props) {
     const [novaEtapa, setNovaEtapa] = useState(false)
     useEffect(() => {
         console.log(novaEtapa)
-        if (props.etapa.id !== -1 && props.etapa.id !== 0) setNovaEtapa(false)
+        if (props.etapa.id > 0) setNovaEtapa(false)
     }, [props.etapa.id, novaEtapa])
 
     return (

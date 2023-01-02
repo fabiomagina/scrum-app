@@ -7,7 +7,8 @@ import Objetivos from "../components/objetivos/Objetivos"
 import Concluidos from "../components/concluidos/Concluidos"
 import NovoObjetivo from "../components/objetivos/NovoObjetivo"
 
-const Routas = props => (
+const Main = props => (
+
     <Routes>
         <Route exact path="/" element={<Dashboard />} />
         <Route path="/daily" element={<Daily />} />
@@ -15,9 +16,9 @@ const Routas = props => (
         <Route path="/objetivos" element={<Objetivos />} />
         <Route path="/concluidos" element={<Concluidos />} />
         <Route path="/novoobjetivo" element={<NovoObjetivo />} />
-
-
     </Routes>
+
 )
 
-export default Routas
+
+export default Main

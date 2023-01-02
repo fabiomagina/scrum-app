@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Main from "../Main";
+import Main from "components/common/Main";
 import axios from "axios";
 import './Objetivos.css'
 import ListObjetivos from "./ListObjetivos"
@@ -53,10 +53,6 @@ class Objetivos extends Component {
             .then(lista => {
                 this.setState({ lista })
             })
-            
-          
-            
-            
     }
 
     verificaNovaEtapa(objetivo) {
@@ -123,7 +119,6 @@ class Objetivos extends Component {
 
     removeEtapa(e) {
         const obj = this.state.obj
-        console.log(e)
         obj.etapas.splice(e.target.name, 1)
         this.setState({ obj })
         this.save()
@@ -152,9 +147,6 @@ class Objetivos extends Component {
         this.setState({ obj })
     }
 
-    etapaLoadWatcher() {
-
-    }
     render() {
         return (
             <Main icon="fa fa-graduation-cap" title="Objetivos">

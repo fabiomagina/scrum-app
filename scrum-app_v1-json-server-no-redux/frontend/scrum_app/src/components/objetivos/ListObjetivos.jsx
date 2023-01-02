@@ -2,7 +2,7 @@ import React from 'react'
 
 const renderRows = (props) => {
     return props.list.map(obj => {
-        const obj_= props.getEtapasVisiveis(obj)
+        const obj_ = props.getEtapasVisiveis(obj)
         
         return (
             <tr key={obj.id}>

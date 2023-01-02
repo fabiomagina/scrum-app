@@ -1,62 +1,743 @@
 {
   "objetivos": [
     {
-      "title": "Novo Objetivo",
+      "title": "DS/A - Data Science",
       "etapas": [
         {
           "id": -1,
-          "title": "Primeira Etapa",
+          "title": "Data Science: analise e visualização de dados",
           "descricao": "",
-          "show": 1
+          "show": 1,
+          "undefined": "Data Science: analise e visualização de dados",
+          "description": ""
         },
         {
           "id": 2,
-          "title": "Adicionar nova etapa",
+          "title": "Python Pandas: tratando e analisando dados",
           "descricao": "",
           "show": 1
         },
         {
           "id": 3,
-          "title": "Etapa com descrição",
+          "title": "Data analysis: introdução a séries temporais e análises",
           "descricao": "",
-          "show": 1,
-          "description": "Criando descrição para etapa"
+          "show": 1
         },
         {
           "id": 4,
-          "title": "Quarta Etapa",
+          "title": "Regressão linear: testando relações e prevendo resultados",
           "descricao": "",
-          "show": 1,
-          "description": "Mais descrição!"
+          "show": 1
+        },
+        {
+          "id": 5,
+          "title": "Regressão Linear: técnicas avançadas de modelagem",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 6,
+          "title": "Data Visualization parte 1: introdução ao design de gráficos",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 7,
+          "title": "Data Visualization parte 2: Escolhendo o melhor gráfico",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 8,
+          "title": "Data Science: testes estatísticos com Python",
+          "descricao": "",
+          "show": 1
         }
       ],
       "id": 1
     },
     {
-      "title": "Mais um Objetivo",
+      "title": "DS/A - Python para Data Science",
       "etapas": [
         {
           "id": -1,
-          "title": "Com etapa!",
+          "title": "Python para Data Science",
+          "descricao": "",
+          "show": 1,
+          "description": "https://cursos.alura.com.br/course/python-intro\nhttps://cursos.alura.com.br/certificate/fabiomagina/python-intro"
+        },
+        {
+          "id": 2,
+          "title": "Python para Data Science: linguagem e Numpy",
+          "descricao": "",
+          "show": 1,
+          "description": "https://cursos.alura.com.br/course/python-tipos-listas-numpy\nhttps://cursos.alura.com.br/certificate/fabiomagina/python-tipos-listas-numpyc"
+        },
+        {
+          "id": 3,
+          "title": "Python para Data Science: Funções, Pacotes e Pandas",
+          "descricao": "",
+          "show": 1,
+          "description": "https://cursos.alura.com.br/course/python-funcoes-pacotes-pandas"
+        },
+        {
+          "id": 4,
+          "title": "Python Pandas: tratando e analisando dados",
+          "descricao": "",
+          "show": 1,
+          "description": "https://cursos.alura.com.br/course/introducao-python-pandas"
+        },
+        {
+          "id": 5,
+          "title": "Pandas: formatos diferentes de entrada e saída (IO)",
+          "descricao": "",
+          "show": 1,
+          "description": "https://cursos.alura.com.br/course/pandas-io"
+        },
+        {
+          "id": 6,
+          "title": "Data Visualization: explorando com Seaborn",
+          "descricao": "",
+          "show": 1,
+          "description": "Data Visualization: explorando com Seaborn"
+        },
+        {
+          "id": 7,
+          "title": "Data Science: análise de series temporais",
+          "descricao": "",
+          "show": 1,
+          "description": "https://cursos.alura.com.br/course/data-science-series-temporais"
+        },
+        {
+          "id": 8,
+          "title": "Corretor Ortográfico em Python: aplicando técnicas de NLP",
           "descricao": "",
           "show": 1
         },
         {
-          "id": 2,
-          "title": "Criando Etapa - Alterar Título",
-          "descricao": "",
-          "show": 1,
-          "undefined": "Criando Etapa ",
-          "description": "Criar descrição!"
-        },
-        {
-          "id": 3,
-          "title": "Outra etapa..",
+          "id": 9,
+          "title": "Scraping com Python: coleta de dados na web",
           "descricao": "",
           "show": 1
         }
       ],
       "id": 2
+    },
+    {
+      "title": "Python - DS/A",
+      "etapas": [
+        {
+          "id": -1,
+          "title": "Python: começando com a linguagem",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 2,
+          "title": "Python: avançando na linguagem",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 3,
+          "title": "Python: entendendo a Orientação a Objetos",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 4,
+          "title": "Python: avançando na orientação a objetos",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 5,
+          "title": "Python: Manipulação de Strings",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 6,
+          "title": "Python Collections parte 1: listas e tuplas",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 7,
+          "title": "Python Collections parte 2: conjuntos e dicionários",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 8,
+          "title": "Python Brasil: validação de dados no padrão nacional",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 9,
+          "title": "Testes automatizados: TDD com Python",
+          "descricao": "",
+          "show": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "title": "DS/A - Machine Learning",
+      "etapas": [
+        {
+          "id": -1,
+          "title": "Machine Learning: classificação com SKLearn",
+          "descricao": "",
+          "show": 1,
+          "description": "Machine Learning: classificação com SKLearn"
+        },
+        {
+          "id": 2,
+          "title": "Machine Learning: Introdução a algoritmos não supervisionados",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 3,
+          "title": "Linguagem Natural parte 1: NLP com análise de sentimento",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 4,
+          "title": "Linguagem Natural parte 2: continuando com a análise de sentimento",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 5,
+          "title": "Linguagem Natural parte 2: continuando com a análise de sentimento",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 6,
+          "title": "Machine Learning: intro a sistemas de recomendação em Python",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 7,
+          "title": "Machine Learning: validação de modelos",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 8,
+          "title": "Machine Learning parte 1: otimização de modelos através de hiperparâmetros",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 9,
+          "title": "Machine Learning parte 2: otimização com exploração aleatória",
+          "descricao": "",
+          "show": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "title": "FS/UD - Curso Web Moderno Completo Com JavaScripto 2022",
+      "etapas": [
+        {
+          "id": -1,
+          "title": "Javascript: Fundamentos",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 2,
+          "title": "Javascript: Estruturas de Controle",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 3,
+          "title": "Javascript: Função",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 4,
+          "title": "Javascript: Objeto",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 5,
+          "title": "Javascript: Array",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 6,
+          "title": "Node",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 7,
+          "title": "ESNext",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 8,
+          "title": "Conceitos sobre Web",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 9,
+          "title": "HTML",
+          "descricao": "",
+          "show": 1,
+          "undefined": "HTML (5hs"
+        },
+        {
+          "id": 10,
+          "title": "CSS ",
+          "descricao": "",
+          "show": 1,
+          "undefined": "CSS - 7h"
+        },
+        {
+          "id": 11,
+          "title": "Integrando HTML, CSS e JS",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 12,
+          "title": "Ajax",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 13,
+          "title": "Gulp",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 14,
+          "title": "Webpack",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 15,
+          "title": "jQuery",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 16,
+          "title": "Bootstrap",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 17,
+          "title": "Projeto Galeria (Bootstrap/jQuery/Webpack)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 18,
+          "title": "React",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 19,
+          "title": "Projeto Calculadora (React)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 20,
+          "title": "Projeto Cadastro de Usuário",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 21,
+          "title": "Projeto Cadastro - Integração com Banco de dados (Firestore)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 22,
+          "title": "VueJS",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 23,
+          "title": "Projetos VueJS",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 24,
+          "title": "Projeto Calculadora (Vue)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 25,
+          "title": "Projeto Monty Hall (Vue)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 26,
+          "title": "Aplicação Desktop com Javascript, Electron JS e Vue JS",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 27,
+          "title": "Angular 9",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 28,
+          "title": "Banco Relacional",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 29,
+          "title": "Banco Não Relacional",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 30,
+          "title": "Express",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 31,
+          "title": "Projeto Base de Conhecimento + Backend",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 32,
+          "title": "Publicando uma Aplicação VueJS na Amazon",
+          "descricao": "",
+          "show": 1
+        }
+      ],
+      "id": 5
+    },
+    {
+      "title": "FS/UD - Curso React + Redux: Fundamentos e 2 Apps do Absoluto ZERO!",
+      "etapas": [
+        {
+          "id": -1,
+          "title": "Introdução",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 2,
+          "title": "Fundamentos React",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 3,
+          "title": "Projeto Calculadora",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 4,
+          "title": "Navegação com React Router",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 5,
+          "title": "React Hooks",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 6,
+          "title": "Projeto Cadastro - Integração com Banco de Dados (Firestore)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 7,
+          "title": "TodoApp (Backend)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 8,
+          "title": "TodoApp (Frontend)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 9,
+          "title": "Gerenciamento de Estado com Redux",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 10,
+          "title": "TodoApp (Migração para Redux)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 11,
+          "title": "Aplicação Final - Ciclos de Pagamanetos (Backend)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 12,
+          "title": "Aplicação Final - Ciclos de Pagamanetos (Frontend)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 13,
+          "title": "Melhorias e Correções",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 14,
+          "title": "Aplicação Final - Autenticação (Frontend)",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 15,
+          "title": "Aplicação Final - Atualizando as Bibliotecas",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 16,
+          "title": "Deploy Heroku",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 17,
+          "title": "**Bônus**: Exercício MongoDB",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 18,
+          "title": "**Bônus**: Exercício Node",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 19,
+          "title": "**Bônus**: Exercício Express",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 20,
+          "title": "Webpack 4",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 21,
+          "title": "React 16.4",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 22,
+          "title": "**Extra**: CSS",
+          "descricao": "",
+          "show": 1
+        }
+      ],
+      "id": 6
+    },
+    {
+      "title": "FE/A - HTML e CSS",
+      "etapas": [
+        {
+          "id": -1,
+          "title": "HTML5 e CSS3 parte 1: crie uma página da Web",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 2,
+          "title": "HTML5 e CSS3 parte 2: posicionamento, listas e navegação",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 3,
+          "title": "HTML5 e CSS3 parte 3: trabalhando com formulários e tabelas",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 4,
+          "title": "HTML5 e CSS3 parte 4: avançando no CSS",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 5,
+          "title": "CSS: dispondo elementos com Flexbox e Grid",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 6,
+          "title": "HTML e CSS: praticando HTML/CSS",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 7,
+          "title": "HTML e CSS: responsividade com mobile-first",
+          "descricao": "",
+          "show": 1
+        }
+      ],
+      "id": 7
+    },
+    {
+      "title": "FE/A - CSS: estilos",
+      "etapas": [
+        {
+          "id": -1,
+          "title": "CSS: Flexbox e layouts responsivos",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 2,
+          "title": "CSS: construindo layouts com Grid",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 3,
+          "title": "SASS: CSS sintaticamente espetacular",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 4,
+          "title": "Tailwind CSS: estilizando a sua página com classes utilitárias",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 5,
+          "title": "Praticando CSS: Grid e Flexbox",
+          "descricao": "",
+          "show": 1
+        }
+      ],
+      "id": 8
+    },
+    {
+      "title": "FE/A - JavaScript para Front-end",
+      "etapas": [
+        {
+          "id": -1,
+          "title": "JavaScript para Web: Crie páginas dinâmicas",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 2,
+          "title": "JavaScript: manipulando o DOM",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 3,
+          "title": "JavaScript na Web: armazenando dados no navegador",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 4,
+          "title": "JavaScript: validações e reconhecimento de voz",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 5,
+          "title": "JavaScript: consumindo e tratando dados de uma API",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 6,
+          "title": "JavaScript: métodos de array",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 7,
+          "title": "JavaScript: criando requisições",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 8,
+          "title": "JavaScript: validando formulários",
+          "descricao": "",
+          "show": 1
+        }
+      ],
+      "id": 9
+    },
+    {
+      "title": "Acessibilidade Web",
+      "etapas": [
+        {
+          "id": -1,
+          "title": "Acessibilidade web: crie designs inclusivos",
+          "descricao": "",
+          "show": 1
+        },
+        {
+          "id": 2,
+          "title": "Acessibilidade web parte 1: tornando seu front-end inclusivo",
+          "descricao": "",
+          "show": 1,
+          "description": "• 01- HTML E OS LEITORES DE TELA:\nNesta primeira aula, introduzimos ferramentas e fluxos para começar a solucionar nossos problemas de acessibilidade, com isto, aprendemos bastante:\n\nUso do leitor de tela:\n\n    Que pessoas cegas ou com baixa visão podem contar com o auxílio de um software que lê o conteúdo exibido na tela, estes recebem o nome de leitores de tela.\n\n*Usando o NVDA: *\n\n    Vimos, configuramos e aprendemos atalhos do NVDA, leitor de tela escolhido para testar o projeto Apeperia, a fim de deixar seu uso em testes menos maçante para quem não está acostumado com a ferramenta. E também habilitamos seu \"exibidor de tela\" para não dependermos de ouvir sua leitura.\n\nSemântica no HTML:\n\n    Tomar cuidado com a marcação de conteúdo quando estamos utilizando elementos HTML5. Vale mais por uma <div> do que usar um <aside> ou <details> erroneamente.\n\nTestes, testes, testes:\n\n    O melhor caminho para deixar nosso projeto inclusivo não é apenas seguir regras e guidelines, mas testá-las por conta para começarmos a compreender os caminhos e dificuldades que muitas pessoas podem ter ao usar nosso produto e/ou serviço. Empatia.\n\n"
+        }
+      ],
+      "id": 10
     }
   ]
 }
